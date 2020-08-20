@@ -16,8 +16,8 @@ const createEmployeeRecords = array => array.map( employee => createEmployeeReco
 
 const createTimeInEvent = (employee, dateStamp) => {
     employee.timeInEvents.push({
-        type: "TimeIn", 
-        hour: parseInt(dateStamp.split(' ')[1]), 
+        type: "TimeIn",
+        hour: parseInt(dateStamp.split(' ')[1]),
         date: dateStamp.split(' ')[0]
         });
     return employee
@@ -25,8 +25,8 @@ const createTimeInEvent = (employee, dateStamp) => {
 
 const createTimeOutEvent = (employee, dateStamp) => {
     employee.timeOutEvents.push({
-        type: "TimeOut", 
-        hour: parseInt(dateStamp.split(' ')[1]), 
+        type: "TimeOut",
+        hour: parseInt(dateStamp.split(' ')[1]),
         date: dateStamp.split(' ')[0]
         });
     return employee

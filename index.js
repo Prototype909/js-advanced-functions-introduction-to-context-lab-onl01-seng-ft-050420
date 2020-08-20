@@ -13,10 +13,10 @@ const createEmployeeRecord = info => {
 };
 
 const createEmployeeRecords = array => {
-    return array.map(e => createEmployeeRecord(e))
+    return array.map(employee => createEmployeeRecord(employee))
 }
 
-function createTimeInEvent(dateStamp){
+function createTimeInEvent(employee, dateStamp){
     this.timeInEvents.push({
       type: "TimeIn",
       date: dateStamp.split(' ')[0],
@@ -25,7 +25,7 @@ function createTimeInEvent(dateStamp){
     return this;
   };
 
-  function createTimeOutEvent(dateStamp){
+  function createTimeOutEvent(employee, dateStamp){
     this.timeOutEvents.push({
       type: "TimeOut",
       date: dateStamp.split(' ')[0],
